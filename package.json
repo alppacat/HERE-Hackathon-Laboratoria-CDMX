@@ -2,7 +2,7 @@
   "name": "here-hackathon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mirenovi.github.io/cdmx-2018-06-bc-core-am-burger-queen",
+  "homepage": "https://mirenovi.github.io/HERE-Hackathon-Laboratoria-CDMX/",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "firebase": "^5.5.5",
