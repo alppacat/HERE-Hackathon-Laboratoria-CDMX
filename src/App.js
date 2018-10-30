@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { initSesion, auth } from './config/firebase';
 
 import Home from './components/Home'; 
-import Calendar from './components/Calendar';
 import Geolocation from './components/Geolocation';
 import SignIn from './components/SignIn';
 import AddNewRute from './components/AddNewR';
@@ -38,7 +37,6 @@ class App extends Component {
         <div className="App">
         <Home/>
           <Geolocation/>
-          <Calendar/>
           <AddNewRute/>          
         </div>
       );

@@ -21,7 +21,7 @@ class Geolocation extends Component {
 					this.setState({
 						url,
 						value: position.coords.latitude + ',' + position.coords.longitude,
-						error: null,
+						error: null
 					});
 				},
 				(error) => this.setState(

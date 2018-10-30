@@ -22,7 +22,8 @@
   text-align: center;
 }
 #newRoute button {
-  margin-left: 90px;
+  margin-left: 80px;
+  margin-bottom: 30px;
 }
 .App {
   text-align: center;
@@ -78,5 +79,5 @@
 }
 
 .btn{
-  color:#00AFAA;
+  background-color:#00AFAA !important;
 }
