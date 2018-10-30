@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 
+
+import { UrlRutes } from '../config/urls';
+
+
+
 class Geolocation extends Component {
 	constructor(props) {
 		super(props)
@@ -13,8 +18,9 @@ class Geolocation extends Component {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
 				(position) => {
-					this.funcionFetch(position.coords.latitude, position.coords.longitude);
+					const url = UrlRutes(position.coords.latitude, position.coords.longitude);
 					this.setState({
+						url,
 						value: position.coords.latitude + ',' + position.coords.longitude,
 						error: null,
 					});
@@ -26,23 +32,18 @@ class Geolocation extends Component {
 		}
 	}
 
-	funcionFetch = (lat, lng) => {
-		const url= `https://image.maps.api.here.com/mia/1.6/mapview?app_id=F2NFi480TAeaCU2fjGmC&app_code=DvU41ZrLHlIVBDtOruPEqg&lat=${lat}&lon=${lng}&vt=0&z=14`;
-		this.setState({
-			url
-		})
-		return url;
-	}
-
-	changeLocation (event) {
-		this.setState({
-			value: event.target.value
-		})
-	}
+	// changeLocation (event) {
+	// 	this.setState({
+	// 		value: event.target.value
+	// 	})
+	// }
+	
+	
 	render(){
 		return(
 			<React.Fragment>
-				<input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/>
+				<h4 align="left">Tu ruta de hoy :</h4>
+				{/* <input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/> */}
 				<img src = {this.state.url} alt='map'/>
 			</React.Fragment>
 		)

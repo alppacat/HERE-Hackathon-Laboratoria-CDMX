@@ -1,19 +1,32 @@
 import React from "react";
-import { Button, NavItem } from "react-materialize";
-
+import { SideNav, SideNavItem, Icon } from "react-materialize";
+import { logout } from '../config/firebase';
+import ButtonA from './Button';
 
 
 const Home = () => {
-    return (
+    const offSesion = () =>{
+        logout()
+    }
+  return (
+    <nav className='btn margin-bottom'>
+      <SideNav className="menu"
+        trigger={
+        <a className="left-align"><Icon>dehaze</Icon></a>
+      }
+        options={{ closeOnClick: true }}
+      >
+        <SideNavItem/>
+        <SideNavItem><Icon>person</Icon>Perfil</SideNavItem>
+        <SideNavItem><Icon>notifications</Icon>Notificaciones</SideNavItem>
+        <SideNavItem divider />
+        <SideNavItem waves href="#!third">
+        <ButtonA classname="btn" logout={offSesion}/>
+        </SideNavItem>
+      </SideNav> 
+    </nav>
 
-            <NavItem>
-            <Button floating large className="teal" waves='ligth' icon='person'></Button>,
-            <Button floating large className="teal" waves='ligth' icon='alarm'></Button>,
-            <Button floating large className="teal" waves='ligth' icon='map'></Button>,
-            <Button floating large className="teal" waves='ligth' icon='dates'></Button>
-            </NavItem>
-
-    );
+  );
 };
 
 export default Home;
