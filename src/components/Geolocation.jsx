@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import { logout } from '../config/firebase';
+
+import Button from './Button';
+
 
 class Geolocation extends Component {
 	constructor(props) {
@@ -39,9 +43,15 @@ class Geolocation extends Component {
 			value: event.target.value
 		})
 	}
+	
+	offSesion = () => {
+		logout();
+		
+	  }
 	render(){
 		return(
 			<React.Fragment>
+				<Button logout={this.offSesion}/>
 				<input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/>
 				<img src = {this.state.url} alt='map'/>
 			</React.Fragment>

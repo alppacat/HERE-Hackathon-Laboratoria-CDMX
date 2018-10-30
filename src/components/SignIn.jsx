@@ -3,21 +3,38 @@ import { Button, Input } from "react-materialize";
 import Imagen from "../assets/school.png";
 // import {Link} from 'react-router-dom'
 
-const SignIn = () => {
-  return (
-    <section className="login-section">
-      <img className="school" src={Imagen} alt = 'school-logo'/>
-      <h1>CaminApp</h1>
-      <div className="form">
-        <Input className="col s3 offset-s1" type="email" label="Email" />
-        <Input className="col s3" type="password" label="password" />
-        <Button waves="light">
-          Login
-        </Button>
-        <p>¿Olvidaste tu contraseña?</p>
-      </div>
-    </section>
-  );
+class SignIn extends Component {
+  constructor(props) {
+    super(props);
+    this.user = React.createRef();
+    this.password = React.createRef();
+  }
+
+  signIn = () => {
+		const u = {
+			user:this.user.current.value,
+			password:this.password.current.value
+    };
+		this.props.login(u.user, u.password);
+	};
+
+  render() {
+    const { user, password } = this;
+    return (
+      <section className="login-section">
+        <img className="school" src={Imagen} alt = 'school-logo'/>
+        <h1>CaminApp</h1>
+        <div className="form">
+          <input className="col s3 offset-s1" type="email" placeholder="Email" ref = {user}/>
+          <input className="col s3" type="password" placeholder="password" ref = {password}/>
+          <Button waves="light"onClick={this.signIn}>
+            Login
+          </Button>
+          <p>¿Olvidaste tu contraseña?</p>
+        </div>
+      </section>
+    );
+  }
 };
 
 export default SignIn;
