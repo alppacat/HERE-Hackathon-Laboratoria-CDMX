@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Button = (props) => {
+const ButtonA = (props) => {
 
     return (
         <React.Fragment>
-            <button onClick={props.logout} >Salir</button>
-        </React.Fragment>
+            <button className="btn" onClick={props.logout} >Cerrar sesión</button>
+        </React.Fragment>   
     );
 }
 
-export default Button;
+export default ButtonA;

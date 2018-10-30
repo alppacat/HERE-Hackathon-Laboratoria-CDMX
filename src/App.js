@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 import { initSesion, auth } from './config/firebase';
 
-import Calendar from './components/Calendar';
+import Home from './components/Home'; 
 import Geolocation from './components/Geolocation';
 import SignIn from './components/SignIn';
 import AddNewRute from './components/AddNewR';
 
 import './App.css';
+//import Button from './components/Button';
 
 class App extends Component {
   constructor () {
@@ -34,9 +35,9 @@ class App extends Component {
     if(uid) {
       return (
         <div className="App">
+        <Home/>
           <Geolocation/>
-          <Calendar/>
-          <AddNewRute/>
+          <AddNewRute/>          
         </div>
       );
     } else {
