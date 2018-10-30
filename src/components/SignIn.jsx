@@ -5,8 +5,9 @@ import Imagen from "../assets/school.png";
 
 const SignIn = () => {
   return (
-    <React.Fragment>
+    <section className="login-section">
       <img className="school" src={Imagen} />
+      <h1>CaminApp</h1>
       <div className="form">
         <Input className="col s3 offset-s1" type="email" label="Email" />
         <Input className="col s3" type="password" label="password" />
@@ -15,7 +16,7 @@ const SignIn = () => {
         </Button>
         <p>¿Olvidaste tu contraseña?</p>
       </div>
-    </React.Fragment>
+    </section>
   );
 };
 
