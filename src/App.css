@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Extra+Condensed');
+
+.login-section{
+  /* width: 100vw;
+  height: 100vh; */
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  color: #47DAD0;
+  margin-top: 3em;
+}
 .App {
   text-align: center;
 }
@@ -29,4 +38,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.school{
+  margin-top: 50px;
+  height: 100px;
+}
+
+.form{
+  width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4em;
+  
 }
