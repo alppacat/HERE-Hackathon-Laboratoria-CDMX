@@ -9,7 +9,7 @@ import SignIn from './components/SignIn';
 import AddNewRute from './components/AddNewR';
 
 import './App.css';
-import Button from './components/Button';
+//import Button from './components/Button';
 
 class App extends Component {
   constructor () {
@@ -39,8 +39,7 @@ class App extends Component {
         <Home/>
           <Geolocation/>
           <Calendar/>
-          <AddNewRute/>
-          
+          <AddNewRute/>          
         </div>
       );
     } else {
