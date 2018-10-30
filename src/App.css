@@ -7,6 +7,23 @@
   color: #47DAD0;
   margin-top: 3em;
 }
+#newRoute {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 4em;
+}
+#calendar input{
+  width: 50%;
+  display: flex;
+  margin-left: 7em;
+}
+#calendar {
+  text-align: center;
+}
+#newRoute button {
+  margin-left: 90px;
+}
 .App {
   text-align: center;
 }
@@ -41,8 +58,12 @@
 }
 
 .school{
+<<<<<<< HEAD
   margin-top: 50px;
   height: 100px;
+=======
+  height: 150px;
+>>>>>>> upstreamQ/master
 }
 
 .form{
@@ -52,6 +73,7 @@
     margin-left: 4em;
   
 }
+<<<<<<< HEAD
 
 .SideNav{
   margin-left:0px;
@@ -64,3 +86,5 @@
 .btn{
   color:#00AFAA;
 }
+=======
+>>>>>>> upstreamQ/master
