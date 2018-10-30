@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Input } from "react-materialize";
+import { Button } from "react-materialize";
 import Imagen from "../assets/aa.png";
 // import {Link} from 'react-router-dom'
 

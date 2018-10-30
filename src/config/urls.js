@@ -11,6 +11,6 @@ export const fetchGeocode = (number,street,cp) => {
 };
 
 export const newWaypoint = (latB, lngB) => {
-	const urlNewWaypoint = `https://image.maps.api.here.com/mia/1.6/mapview?app_id=F2NFi480TAeaCU2fjGmC&app_code=DvU41ZrLHlIVBDtOruPEqg&lat=${latB}&lon=${lngB}&vt=0&z=14`;
+	const urlNewWaypoint = `https://image.maps.api.here.com/mia/1.6/mapview?app_id=F2NFi480TAeaCU2fjGmC&app_code=DvU41ZrLHlIVBDtOruPEqg&lat=${latB}&lon=${lngB}&vt=0&z=14&w=300&h=300`;
 	return urlNewWaypoint;
 }
