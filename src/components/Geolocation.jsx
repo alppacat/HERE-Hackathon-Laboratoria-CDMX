@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import { logout } from '../config/firebase';
+
+import Button from './Button';
+
 
 class Geolocation extends Component {
 	constructor(props) {
@@ -27,7 +31,7 @@ class Geolocation extends Component {
 	}
 
 	funcionFetch = (lat, lng) => {
-		const url= `https://image.maps.api.here.com/mia/1.6/mapview?app_id=F2NFi480TAeaCU2fjGmC&app_code=DvU41ZrLHlIVBDtOruPEqg&lat=${lat}&lon=${lng}&vt=0&z=14`;
+		const url= `https://image.maps.api.here.com/mia/1.6/routing?app_id=F2NFi480TAeaCU2fjGmC&app_code=DvU41ZrLHlIVBDtOruPEqg&waypoint0=${lat},${lng}&waypoint1=19.451,-99.166&poix0=19.452,-99.16498910000001;00a3f2;00a3f2;11;.&poix1=19.452,-99.16498910000001;white;white;11;.&lc=1652B4&lw=6&t=0&ppi=320&w=250&h=300`;
 		this.setState({
 			url
 		})
@@ -39,9 +43,15 @@ class Geolocation extends Component {
 			value: event.target.value
 		})
 	}
+	
+	offSesion = () => {
+		logout();
+		
+	  }
 	render(){
 		return(
 			<React.Fragment>
+				<Button logout={this.offSesion}/>
 				<input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/>
 				<img src = {this.state.url} alt='map'/>
 			</React.Fragment>
