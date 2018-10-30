@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+
 import { initSesion, auth } from './config/firebase';
+
+import Calendar from './components/Calendar';
 import Geolocation from './components/Geolocation';
-import './App.css';
 import SignIn from './components/SignIn';
+import AddNewRute from './components/AddNewR';
+
+import './App.css';
 
 class App extends Component {
   constructor () {
@@ -30,6 +35,8 @@ class App extends Component {
       return (
         <div className="App">
           <Geolocation/>
+          <Calendar/>
+          <AddNewRute/>
         </div>
       );
     } else {
