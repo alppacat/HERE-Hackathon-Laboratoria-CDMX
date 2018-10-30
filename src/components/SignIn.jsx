@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button, Input } from "react-materialize";
-import Imagen from "../assets/school.png";
+import { Button } from "react-materialize";
+import Imagen from "../assets/aa.png";
 // import {Link} from 'react-router-dom'
 
 class SignIn extends Component {
@@ -23,7 +23,6 @@ class SignIn extends Component {
     return (
       <section className="login-section">
         <img className="school" src={Imagen} alt = 'school-logo'/>
-        <h1>CaminApp</h1>
         <div className="form">
           <input className="col s3 offset-s1" type="email" placeholder="Email" ref = {user}/>
           <input className="col s3" type="password" placeholder="password" ref = {password}/>

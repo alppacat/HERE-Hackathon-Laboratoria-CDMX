@@ -18,6 +18,12 @@
   display: flex;
   margin-left: 7em;
 }
+#calendar {
+  text-align: center;
+}
+#newRoute button {
+  margin-left: 90px;
+}
 .App {
   text-align: center;
 }
@@ -52,8 +58,7 @@
 }
 
 .school{
-  margin-top: 50px;
-  height: 100px;
+  height: 150px;
 }
 
 .form{
@@ -62,4 +67,16 @@
     flex-direction: column;
     margin-left: 4em;
   
+}
+
+.SideNav{
+  margin-left:0px;
+}
+
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+.btn{
+  color:#00AFAA;
 }
