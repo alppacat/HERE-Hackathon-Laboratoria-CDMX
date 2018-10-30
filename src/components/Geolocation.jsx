@@ -22,7 +22,7 @@ class Geolocation extends Component {
 					this.setState({
 						url,
 						value: position.coords.latitude + ',' + position.coords.longitude,
-						error: null,
+						error: null
 					});
 				},
 				(error) => this.setState(
@@ -45,7 +45,7 @@ class Geolocation extends Component {
 	render(){
 		return(
 			<React.Fragment>
-				<Button logout={this.offSesion}/>
+				{/* <Button logout={this.offSesion}/> */}
 				{/* <input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/> */}
 				<img src = {this.state.url} alt='map'/>
 			</React.Fragment>
