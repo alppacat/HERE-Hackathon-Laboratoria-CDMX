@@ -7,6 +7,17 @@
   color: #47DAD0;
   margin-top: 3em;
 }
+#newRoute {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 4em;
+}
+#calendar input{
+  width: 50%;
+  display: flex;
+  margin-left: 7em;
+}
 .App {
   text-align: center;
 }
