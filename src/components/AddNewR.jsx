@@ -38,9 +38,16 @@ class AddNewRute extends Component {
 				<input type="text" placeholder="numero" ref = {number}/>
 				<input type="text" placeholder="CP" ref = {cp}/>
 				<button onClick={this.fetchGeo} className='btn-floating btn-large waves-effect waves-light red'><i className="material-icons">add</i></button>
-
-				{/* <button onClick={this.fetchGeo}>fetch</button> */}
-				<img src = {this.state.url} alt = 'Nueva punto de partida'/>
+				<div className="row">
+					<div className="col s10 m6 offset-s1">
+						<div className="card">
+						<div className="card-image" widht='250' heigth ='300'>
+							<span className="indigo-text text-darken-4">Tu Ruta Actual</span>
+							<img src={this.state.url} alt='Nueva punto de partida' />
+						</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		);
 	}

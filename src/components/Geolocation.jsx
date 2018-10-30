@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { logout } from '../config/firebase';
 
 import { UrlRutes } from '../config/urls';
-import Button from './Button';
 
 
 class Geolocation extends Component {
@@ -31,12 +30,6 @@ class Geolocation extends Component {
 			);
 		}
 	}
-
-	// changeLocation (event) {
-	// 	this.setState({
-	// 		value: event.target.value
-	// 	})
-	// }
 	
 	offSesion = () => {
 		logout();
@@ -44,11 +37,18 @@ class Geolocation extends Component {
 	  }
 	render(){
 		return(
-			<React.Fragment>
-				<Button logout={this.offSesion}/>
-				{/* <input className='input-geo' value={this.state.value} onChange={event=>this.changeLocation(event)}/> */}
-				<img src = {this.state.url} alt='map'/>
-			</React.Fragment>
+			<section>
+				<div className="row">
+					<div className="col s10 m6 offset-s1">
+						<div className="card">
+						<div className="card-image" widht='250' heigth ='300'>
+							<span className="indigo-text text-darken-4">Tu Ruta Actual</span>
+							<img src={this.state.url} alt='mapa-actual' />
+						</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		)
 	}
 
