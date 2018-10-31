@@ -24,10 +24,10 @@ class SignIn extends Component {
       <section className="login-section">
         <img className="school" src={Imagen} alt = 'school-logo'/>
         <div className="form">
-          <input className="col s3 offset-s1" type="email" placeholder="Email" ref = {user}/>
-          <input className="col s3" type="password" placeholder="password" ref = {password}/>
+          <input className="col s3 offset-s1" type="email" placeholder="correo electrónico" ref = {user}/>
+          <input className="col s3" type="password" placeholder="contraseña" ref = {password}/>
           <Button waves="light"onClick={this.signIn}>
-            Login
+            Inicia sesión
           </Button>
           <p>¿Olvidaste tu contraseña?</p>
         </div>

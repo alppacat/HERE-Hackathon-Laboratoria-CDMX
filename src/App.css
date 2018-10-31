@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Extra+Condensed');
 
-.login-section{
-  /* width: 100vw;
-  height: 100vh; */
+.login-section {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   color: #47DAD0;
-  margin-top: 3em;
+  height: 100vh;
+  background: #ffffed;
+  padding-top: 4em;
 }
 #newRoute {
   display: flex;
@@ -49,6 +49,11 @@
   color: #61dafb;
 }
 
+.form input {
+  margin-top: 1.1em;
+  font-size: 1.5em;
+  color: #282c34;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -79,5 +84,10 @@
 }
 
 .btn{
-  background-color:#00AFAA !important;
+  background-color:#fbaf41 !important;
+}
+
+.form button{
+  margin-top: 1.2em;
+  font-size: 1.2em;
 }
