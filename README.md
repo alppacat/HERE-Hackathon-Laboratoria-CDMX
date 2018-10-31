@@ -17,3 +17,5 @@
 
 [UX Research](
 https://docs.google.com/presentation/d/1PRhp_zJfaeyHc22-5TyR18lR5t3XCEDQu6UWsT0h-rw/edit?usp=sharing)
+
+[Presentación](https://docs.google.com/presentation/d/1PRhp_zJfaeyHc22-5TyR18lR5t3XCEDQu6UWsT0h-rw/edit?usp=sharing)
